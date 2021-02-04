@@ -10,7 +10,7 @@ html = ((site.text).split('<'))
 
 
 
-bob = open("test2.csv",'r') 
+bob = open("headers.csv",'r') 
 
 bob_string = bob.read()
 
