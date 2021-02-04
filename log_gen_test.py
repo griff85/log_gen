@@ -6,7 +6,7 @@ import requests
 
 site = requests.get("https://www.google.com")
 
-stuff = ((site.text).split('<'))
+html = ((site.text).split('<'))
 
 
 
@@ -14,19 +14,19 @@ bob = open("test2.csv",'r')
 
 bob_string = bob.read()
 
-garbo = {}
+dummy_data = {}
 
 for i in bob_string.split(','):
-	garbo[i] = []
-print(garbo)
+	dummy_data[i] = []
+print(dummy_data)
 
-for i,v in garbo.items():
-	#garbo[i].append(str(datetime.datetime.now()))
-	for thing in stuff:
-		garbo[i].append(thing)
+for i,v in dummy_data.items():
+	#dummy_data[i].append(str(datetime.datetime.now()))
+	for chunk in html:
+		dummy_data[i].append(chunk)
 
 
-data = pd.DataFrame(garbo)
+data = pd.DataFrame(dummy_data)
 
 print(data)
 
